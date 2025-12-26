@@ -1,0 +1,350 @@
+/* =========================================================
+   RESET & VARIABLE
+========================================================= */
+:root {
+  --primary: #4cc9f0;
+  --bg-dark: #0b1220;
+  --bg-mid: #111b33;
+  --text: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-mid));
+  color: var(--text);
+  overflow-x: hidden;
+  padding-bottom: 70px;
+}
+
+/* =========================================================
+   BACKGROUND EFFECT
+========================================================= */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at right,
+    rgba(76, 201, 240, 0.18),
+    transparent 60%
+  );
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+.topbar {
+  height: 70px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.35)
+  );
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.profile img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+.profile span {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.top-info {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  color: #e5e7eb;
+  transition: all 0.25s ease;
+}
+
+.badge:hover {
+  background: rgba(76, 201, 240, 0.25);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 70px);
+  position: relative;
+}
+
+/* === HERO BACKGROUND CHARACTER === */
+.hero.hero-bg {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(11, 18, 32, 0.95) 35%,
+      rgba(11, 18, 32, 0.75) 55%,
+      rgba(11, 18, 32, 0.35) 70%,
+      rgba(11, 18, 32, 0.1) 85%
+    ),
+    url("../img/jin_woo.jpg");
+
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+
+.hero-text {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+  color: var(--primary);
+}
+
+.hero-text p {
+  max-width: 420px;
+  margin-bottom: 2rem;
+  color: #cbd5f5;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+.section {
+  padding: 5rem 4rem;
+}
+
+.section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.section p {
+  max-width: 700px;
+  color: #cbd5f5;
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  padding: 1.6rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(76, 201, 240, 0.18);
+}
+
+.skill-category h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.skill-item h4 {
+  margin-top: 0.6rem;
+  color: #f8fafc;
+}
+
+.skill-item p,
+.skill-category ul li {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.skill-category ul {
+  padding-left: 1.2rem;
+}
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.card {
+  padding: 1.6rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(76, 201, 240, 0.25);
+}
+
+.card h3 {
+  color: var(--primary);
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+.contact-box {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact-list li {
+  margin: 12px 0;
+  font-size: 1rem;
+}
+
+/* =========================================================
+   BOTTOM MENU
+========================================================= */
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.bottom-menu a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #cbd5f5;
+}
+
+.bottom-menu a:hover {
+  color: var(--primary);
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: linear-gradient(135deg, #0b1220, #111b33);
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero.hero-bg {
+    background-position: center bottom;
+    background-size: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text {
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero.hero-bg {
+    background-size: 95%;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .skills,
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}

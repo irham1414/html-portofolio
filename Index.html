@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game-Style Portfolio</title>
+  <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="bg-overlay"></div>
+
+  <!-- ================= TOP BAR ================= -->
+  <header class="topbar">
+    <div class="profile">
+      <img src="Assets/img/hades.png" alt="Profile">
+      <div>
+        <strong>Irham Nur Wahdani</strong><br>
+        <span>Web Developer & Game Developer</span>
+      </div>
+    </div>
+
+    <div class="top-info">
+      <button class="badge" onclick="openModal('experience')">⭐ 5+</button>
+      <button class="badge" onclick="openModal('projects')">📁 10 Project</button>
+      <button class="badge" onclick="openModal('role')">🏆 Junior Dev</button>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <!-- NOTE:
+       Gambar karakter TIDAK ADA di HTML
+       Akan dijadikan background lewat CSS -->
+  <main class="hero hero-bg" id="home">
+    <div class="hero-text">
+      <h1>Halo, Saya <span>Irham Nur Wahdani</span></h1>
+      <p>
+        Saya berfokus pada pengembangan website modern dengan desain interaktif
+        dan performa optimal, serta memiliki minat besar pada game development.
+      </p>
+    </div>
+  </main>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <h2>Tentang Saya</h2>
+    <p>
+      Saya adalah seorang Programmer dan Gamer yang memiliki ketertarikan besar
+      pada dunia teknologi interaktif, khususnya pengembangan game dan aplikasi
+      berbasis web. Berawal dari hobi bermain game dan rasa penasaran terhadap
+      cara kerja sistem di baliknya, saya mulai mendalami pemrograman untuk
+      menciptakan solusi digital yang tidak hanya fungsional, tetapi juga menarik
+      dan efisien.
+    </p>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills">
+
+      <div class="skill-category">
+        <h3>Programming & Development</h3>
+        <div class="skill-item">
+          <h4>Web Development</h4>
+          <p>HTML, CSS, JavaScript</p>
+        </div>
+        <div class="skill-item">
+          <h4>Backend Development</h4>
+          <p>PHP (Laravel), REST API</p>
+        </div>
+        <div class="skill-item">
+          <h4>Database Management</h4>
+          <p>MySQL</p>
+        </div>
+        <div class="skill-item">
+          <h4>Authentication & Security</h4>
+          <p>JWT Authentication, dasar keamanan web</p>
+        </div>
+        <div class="skill-item">
+          <h4>Version Control</h4>
+          <p>Git & GitHub</p>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Game Development (Dasar – Berkembang)</h3>
+        <ul>
+          <li>Game mechanics & gameplay loop</li>
+          <li>Logika score, level, state</li>
+          <li>Eksplorasi Unity / Godot / Unreal</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Problem Solving</h3>
+        <ul>
+          <li>Analisis masalah</li>
+          <li>Debugging mandiri</li>
+          <li>Optimasi performa</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Cepat belajar</li>
+          <li>Mandiri & tim</li>
+          <li>Disiplin & konsisten</li>
+          <li>Komunikasi teknis</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+      <div class="card">
+        <h3>Web Portfolio Pribadi</h3>
+        <p>Website portofolio modern dan responsif.</p>
+        <p><strong>Teknologi:</strong> HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="card">
+        <h3>Web Service JWT</h3>
+        <p>REST API dengan autentikasi JWT.</p>
+        <p><strong>Teknologi:</strong> Laravel, MySQL</p>
+      </div>
+
+      <div class="card">
+        <h3>CRUD Application</h3>
+        <p>Manajemen data lengkap.</p>
+        <p><strong>Teknologi:</strong> PHP, MySQL</p>
+      </div>
+
+      <div class="card">
+        <h3>Mini Game Prototype</h3>
+        <p>Prototype game sederhana.</p>
+        <p><strong>Status:</strong> On Progress</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section" id="contact">
+    <h2>Kontak</h2>
+
+    <div class="contact-box">
+      <ul class="contact-list">
+        <li>📧 <a href="mailto:irhmnrwhdni@email.com">irhmnrwhdni@email.com</a></li>
+        <li>📱 <a href="https://wa.me/6287860101916" target="_blank">0878-6010-1916</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= BOTTOM MENU ================= -->
+  <nav class="bottom-menu">
+    <a onclick="scrollToSection('home')">🏠 Home</a>
+    <a onclick="scrollToSection('about')">👤 About</a>
+    <a onclick="scrollToSection('skills')">🧠 Skills</a>
+    <a onclick="scrollToSection('projects')">📁 Projects</a>
+    <a onclick="scrollToSection('contact')">✉️ Contact</a>
+  </nav>
+
+  <!-- ================= MODAL ================= -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+
+    const modal = document.getElementById("modal");
+    const modalContent = document.getElementById("modalContent");
+
+    function openModal(type) {
+      modal.classList.add("active");
+
+      if (type === "experience") {
+        modalContent.innerHTML = "<h3>⭐ Experience</h3><p>8+ tahun belajar dan praktik.</p>";
+      }
+      if (type === "projects") {
+        modalContent.innerHTML = "<h3>📁 Projects</h3><p>10+ proyek web & game.</p>";
+      }
+      if (type === "role") {
+        modalContent.innerHTML = "<h3>🏆 Role</h3><p>Junior Developer.</p>";
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove("active");
+    }
+  </script>
+
+</body>
+</html>
